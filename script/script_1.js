@@ -1,12 +1,12 @@
-const header = document.querySelector("hesder");
+const header = document.querySelector("header");
 let scrollHight = 0; 
 // 스크롤 위치값 넣을 변수
 
 window.addEventListener("scroll",() => {
     if(scrollHight < window.scrollY){
-        // 숨기는 함수 실행
+        hide() // 숨기는 함수 실행
     }else{
-        // 헤더 보여짐
+        show()// 헤더 보여짐
     }
     scrollHight = window.scrollY
 });
