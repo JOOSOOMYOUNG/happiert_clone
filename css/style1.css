@@ -1,0 +1,399 @@
+/* 폰트 시작 */
+@font-face {
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+
+body {
+    font-family: 'Suit';
+}
+/* 폰트 끝 */
+
+/* fixed_icons 시작 */
+.fixed_icons {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+}
+
+.fixed_icons > a {
+    display: block;
+    margin: 8px 0;
+}
+/* fixed_icons 끝 */
+
+/* 헤더 시작 */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+header.hide{
+    transform: translateY(50%);
+    opacity: 0;
+}
+
+.sign_up_popup{
+    background-color: #BE201F;
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+}
+
+.sign_up_popup > a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    padding: 0 80px;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu > li {
+    margin: 0 16px;
+}
+
+.menu > li > a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #BE201F;
+    font-weight: 900;
+}
+
+.menu > li > a::after {
+    /* ::after 가상요소는 꾸밈요소로 css에서 꾸며주는 역할 */
+    content: '';
+    width: 0%;
+    height: 2px;
+    display: block;
+    /* 콘텐츠를 비웠기 때문에 사용 */
+    background-color: #BE201F;
+    margin-top: 5px;
+    transition: 0.5s;
+}
+
+.menu > li:hover a::after {
+    width: 100%;
+}
+
+.logo {
+    width: 550px;
+    text-align: center;
+}
+
+.header_icons {
+    display: flex;
+    width: 550px;
+    justify-content: flex-end;
+}
+
+.header_icons > li {
+    margin: 0 16px;
+}
+
+/* 헤더 끝 */
+
+/* 메인 시작 */
+.main_container {
+    height: 100vh;
+}
+.main_background {
+    background: url(../img/header_img.png);
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main_texts {
+    position: absolute;
+    color: #fff;
+    top: 220px;
+    left: 100px;
+}
+
+.main_texts > h2 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 65px;
+    margin-bottom: 50px;
+}
+
+/* 메인 끝 */
+
+/* 수업 불참한 부분 */
+/* shake_type_container 시작 */
+.shake_type_container {
+    margin-top: 100px;
+}
+
+.shake_type_list {
+    display: flex;
+    justify-content: center;
+}
+
+.shake > a > img {
+    width: 550px;
+    margin: 0 24px;
+}
+
+.shake_texts {
+    margin: 16px 24px;
+    color: #be201f;
+}
+
+.shake_name {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.shake_discount {
+    margin: 8px 0 16px 0;
+    font-size: 20px;
+}
+
+.shake_price {
+    color: #e0a8a8;
+    text-decoration: line-through;
+}
+
+.discount_rate {
+    border: 1px solid #be201f;
+    padding: 10px;
+    border-radius: 25px;
+    display: inline-block;
+}
+/* shake_type_container 끝 */
+
+
+/* animation_text_container 시작 */
+.animation_text_container {
+    margin: 100px 0;
+    overflow: hidden;
+}
+
+.animation_text {
+    color: #be201f;
+    font-size: 150px;
+    width: max-content;
+    animation: text_translate_ani 100s infinite linear;
+}
+
+.animation_text_container:hover .animation_text {
+    /* animation-duration: 600s; */
+    animation-play-state: paused;
+    color: #e0a8a8;
+}
+
+@keyframes text_translate_ani {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+/* animation_text_container 끝 */
+
+/* diet_technique_container 시작 */
+
+.diet_technique_container > ul {
+    display: flex;
+    justify-content: center;
+}
+
+.diet_technique_container > ul:first-child {
+    margin-bottom: 50px;
+}
+
+.diet_technique_container > ul > li > img {
+    width: 550px;
+    margin: 0 25px;
+}
+
+/* .diet_technique_text {
+    color: #be201f;
+    margin: 0 25px;
+    padding: 60px 40px;
+    width: 550px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.diet_technique_text > h2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.diet_technique_text > p {
+    font-size: 20px;
+} */
+
+.diet_technique_text {
+    color: #be201f;
+    width: 560px;
+    padding: 60px 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.diet_technique_text > h2 {
+    font-size: 60px;
+    font-weight: 600;
+    margin-bottom: 32px;
+}
+
+.diet_technique_text > p {
+    line-height: 24px;
+    margin-bottom: 250px;
+}
+
+.button {
+    width: fit-content;
+    background: none;
+    border: 1px solid #be201f;
+    padding: 16px 0;
+    border-radius: 50px;
+    color: #be201f;
+    padding: 16px 34px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 50px;
+}
+/* diet_technique_container 끝*/
+
+
+/* identity_container > identity_text 시작 */
+.identity_text {
+    display: flex;
+    justify-content: space-between;
+    padding: 150px 60px;
+    align-items: center;
+}
+
+.identity_text > h2 {
+    font-size: 110px;
+    color: #be201f;
+    line-height: 150px;
+}
+
+.identity_text > h2 > span {
+    border: 2px solid #be201f;
+    padding: 4px 60px 8px 60px;
+    border-radius: 150px;
+}
+
+.identity_text > figure {
+    animation: identity_ani 10s infinite linear;
+}
+
+@keyframes identity_ani {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* identity_container > identity_text 끝 */
+
+
+/* identity_container > identity_content 시작 */
+.identity_content {
+    background-image: url(../img/about_img.png);
+    height: 738px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    gap: 34px;
+}
+
+.identity_content > h2 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.identity_content > p {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* identity_container > identity_content 끝 */
+
+/* footer 시작 */
+footer {
+    background-color: #BE201F;
+    padding: 100px 80px;
+    font-size: 20px;
+    color: #fff;
+}
+
+footer > figure {
+    margin-bottom: 60px;
+}
+
+.footer_content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_title {
+    margin-bottom: 24px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.info_texts > p {
+    margin-bottom: 16px;
+}
+
+.info_texts > p:last-child {
+    margin-bottom: 50px;
+}
+
+.guide {
+    width: 250px;
+}
+
+.guide > ul > li {
+    padding: 16px 0;
+    border-bottom: 1px solid #fff;
+}
+
+.guide > ul > li > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.contact > div > p {
+    margin-bottom: 16px;
+}
+
+.contact > div > p:nth-child(2){
+    margin-bottom: 30px;
+}
+
+.contact > div > p:first-child {
+    font-size: 30px;
+
+}
+/* footer 끝 */
