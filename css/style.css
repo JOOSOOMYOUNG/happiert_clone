@@ -1,18 +1,12 @@
 /* 폰트 시작 */
 @font-face {
-    font-family: 'NanumSquareNeo';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-bRg.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: 'NanumSquareNeoBold';
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot);
-    src: url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.eot?#iefix) format("embedded-opentype"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.woff) format("woff"), url(https://hangeul.pstatic.net/hangeul_static/webfont/NanumSquareNeo/NanumSquareNeoTTF-cBd.ttf) format("truetype");
+    font-family: 'Suit';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
 }
 
 body {
-    font-family: 'NanumSquareNeo';
+    font-family: 'Suit';
 }
 /* 폰트 끝 */
 
@@ -127,7 +121,7 @@ header.hide{
 .main_texts {
     position: absolute;
     color: #fff;
-    top: 300px;
+    top: 220px;
     left: 100px;
 }
 
@@ -140,15 +134,19 @@ header.hide{
 
 /* 메인 끝 */
 
-/* 수업 불참한 부분 */
 /* shake_type_container 시작 */
 .shake_type_container {
-    margin-top: 100px;
+    padding: -0px 80px 80px 80px;
 }
 
-.shake_plan {
+.shake_type_list {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.shake_type_list > li > a > img {
+    width: 556px;
+    height: 683px;
 }
 
 .shake > a > img {
@@ -156,18 +154,18 @@ header.hide{
     margin: 0 24px;
 }
 
-.shake_texts {
-    margin: 16px 24px;
+.shake_type_list > li {
+    /* margin: 16px 24px; */
     color: #be201f;
 }
 
 .shake_name {
     font-size: 20px;
     font-weight: 600;
+    margin: 16px 0px;
 }
 
 .shake_discount {
-    margin: 8px 0 16px 0;
     font-size: 20px;
 }
 
@@ -181,27 +179,31 @@ header.hide{
     padding: 10px;
     border-radius: 25px;
     display: inline-block;
+    margin-top: 16px;
 }
 /* shake_type_container 끝 */
 
+/* diet_technique_container 시작 */
 
-/* animation_text_container 시작 */
-.animation_text_container {
-    margin: 100px 0;
+.diet_technique_container {
     overflow: hidden;
 }
 
-.animation_text {
+.ani_text > p {
+    margin-bottom: 100px;
+}
+
+.ani_text {
     color: #be201f;
     font-size: 150px;
     width: max-content;
     animation: text_translate_ani 100s infinite linear;
 }
 
-.animation_text_container:hover .animation_text {
-    /* animation-duration: 600s; */
-    animation-play-state: paused;
-    color: #e0a8a8;
+.ani_text:hover {
+    animation-duration: 600s;
+    color: #db5b5b;
+    transition: animation-duration 0.3s ease;
 }
 
 @keyframes text_translate_ani {
@@ -212,9 +214,6 @@ header.hide{
         transform: translateX(-50%);
     }
 }
-/* animation_text_container 끝 */
-
-/* diet_technique_container 시작 */
 
 .diet_technique_container > ul {
     display: flex;
@@ -232,40 +231,43 @@ header.hide{
 
 .diet_technique_text {
     color: #be201f;
-    margin: 0 25px;
+    width: 560px;
     padding: 60px 40px;
-    width: 550px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.diet_technique_text > div > h2 {
-    font-size: 50px;
+.diet_technique_text > h2 {
+    font-size: 60px;
     font-weight: 600;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
-.diet_technique_text > div > p {
-    font-size: 20px;
+.diet_technique_text > p {
+    line-height: 24px;
+    margin-bottom: 250px;
 }
 
-.button {
+.more_btn {
+    color: #be201f;
     width: fit-content;
     background: none;
     border: 1px solid #be201f;
-    padding: 16px 0;
+    padding: 16px 32px;
     border-radius: 50px;
-}
-
-.button > a {
-    color: #be201f;
-    padding: 16px 34px;
     font-size: 20px;
     text-decoration: none;
     border-radius: 50px;
+    transition: 0.5s;
 }
+
+.more_btn:hover {
+    color: #fff;
+    background-color: #be201f;
+}
+
 /* diet_technique_container 끝*/
 
 
@@ -299,6 +301,16 @@ header.hide{
     }
 }
 
+.more_btn.white {
+    color: #fff;
+    background: none;
+    border: 1px solid #fff;
+}
+
+.more_btn.white:hover {
+    color: #be201f;
+    background: #fff;
+}
 /* identity_container > identity_text 끝 */
 
 
@@ -324,7 +336,6 @@ header.hide{
     font-size: 20px;
     line-height: 24px;
 }
-
 /* identity_container > identity_content 끝 */
 
 /* footer 시작 */
