@@ -74,12 +74,10 @@ header.hide{
 }
 
 .menu > li > a::after {
-    /* ::after 가상요소는 꾸밈요소로 css에서 꾸며주는 역할 */
     content: '';
     width: 0%;
     height: 2px;
     display: block;
-    /* 콘텐츠를 비웠기 때문에 사용 */
     background-color: #BE201F;
     margin-top: 5px;
     transition: 0.5s;
@@ -155,7 +153,6 @@ header.hide{
 }
 
 .shake_type_list > li {
-    /* margin: 16px 24px; */
     color: #be201f;
 }
 
